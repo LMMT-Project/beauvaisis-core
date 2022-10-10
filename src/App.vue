@@ -5,8 +5,11 @@ import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
-  <TopBar></TopBar>
-  <NavBar></NavBar>
+  <div v-if="this.$route.name != 'PageNotFound'">
+    <TopBar></TopBar>
+    <NavBar></NavBar>
+  </div>
+
 
   <RouterView />
 </template>
