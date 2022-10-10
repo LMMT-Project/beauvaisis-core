@@ -4,7 +4,10 @@ import NavBarItem from "./NavBarItem.vue";
 
 <template>
   <div class="navbar">
-    <img src="../assets/LogoAgglo.png" alt="Logo agglomération Beauvaisis" />
+    <img
+      src="../assets/images/LogoAgglo.png"
+      alt="Logo agglomération Beauvaisis"
+    />
     <nav>
       <NavBarItem text="L'agglo" href="/"></NavBarItem>
       <NavBarItem text="Text" href="#"></NavBarItem>
@@ -23,8 +26,5 @@ import NavBarItem from "./NavBarItem.vue";
 
 img {
   margin: 0 60px 0 68px;
-}
-
-nav {
 }
 </style>
