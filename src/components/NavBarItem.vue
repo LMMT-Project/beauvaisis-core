@@ -1,7 +1,10 @@
 <script setup lang="ts">
-defineProps<{
-  text: string;
-  href: string;
+  defineProps<{
+    text: {
+      type: string,
+      default: "Text",
+    },
+    href: string,
 }>();
 </script>
 
@@ -20,11 +23,10 @@ a {
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
+  text-transform: uppercase;
 
-  /* hvr-underline-from-left */
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
@@ -32,7 +34,6 @@ a {
 }
 
 a:before {
-  /* hvr-underline-from-left */
   content: "";
   position: absolute;
   z-index: -1;
@@ -41,17 +42,13 @@ a:before {
   bottom: 0;
   background: var(--light-blue);
   height: 8px;
-  -webkit-transition-property: right;
   transition-property: right;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 a:hover:before,
 a:focus:before,
 a:active:before {
-  /* hvr-underline-from-left */
   right: 0;
 }
 </style>

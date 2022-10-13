@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import TopBar from "./components/TopBar.vue";
-import NavBar from "./components/NavBar.vue";
+import TopPage from "./components/TopPage.vue";
 </script>
 
 <template>
   <div v-if="this.$route.name != 'PageNotFound'">
-    <TopBar></TopBar>
-    <NavBar></NavBar>
+    <TopPage></TopPage>
   </div>
 
   <RouterView />

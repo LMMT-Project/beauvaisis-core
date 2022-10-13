@@ -9,8 +9,8 @@ import HeroSearchBar from "./HeroSearchBar.vue";
         <h1>Communauté d'agglomération du Beauvaisis</h1>
       </div>
       <HeroSearchBar></HeroSearchBar>
+      <!-- <div class="hero-cut"></div> -->
       <!-- TODO: Quick access element -->
-      <div class="hero-cut"></div>
     </div>
   </div>
 </template>
@@ -41,19 +41,17 @@ import HeroSearchBar from "./HeroSearchBar.vue";
   display: inline-block;
   height: 0;
   width: 0;
-  border-bottom: 200px solid var(--white);
-  border-left: 1920px solid transparent;
+  border-bottom: 5vh solid var(--white);
+  border-left: 100vw solid transparent;
 }
 
 .hero-title {
-  width: 80vh;
-  margin: auto;
-  margin-top: 130px;
+  width: 60vw;
+  margin: 130px auto auto;
 }
 
 h1 {
   color: var(--white);
-  font-family: Arial;
   font-size: 48px;
   font-weight: bold;
   text-align: center;
@@ -65,7 +63,7 @@ h1::after {
   margin: auto;
   margin-top: 24px;
   width: 312px;
-  border: 3px solid var(--light-blue);
-  border-radius: 3px;
+  border-bottom: 4px solid var(--light-blue);
+  border-radius: 4px;
 }
 </style>

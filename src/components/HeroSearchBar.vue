@@ -11,8 +11,7 @@ import IconSearch from "./icons/IconSearch.vue";
 
 <style scoped>
 .searchbar-container {
-  margin: auto;
-  margin-top: 124px;
+  margin: 124px auto auto;
   width: 67%;
   max-width: 550px;
   height: 64px;

@@ -1,13 +1,16 @@
-/* color palette from <https://github.com/vuejs/theme> */
-:root {
+    :root {
     /* ===== COLORS ===== */
     --dark-blue: #18314f;
     --light-blue: #8bbeb2;
     --white: #fbfbff;
 }
 
-body {
+*, *::before, *::after {
     margin: 0;
-    font-family: Arial;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, serif;
     background-color: var(--white);
 }
