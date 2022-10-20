@@ -5,7 +5,7 @@ import NavBarItem from "./NavBarItem.vue";
 <template>
   <div class="navbar">
     <img
-      src="../assets/images/LogoAgglo.png"
+      src="../../assets/images/LogoAgglo.png"
       alt="Logo agglomération Beauvaisis"
     />
     <nav>
@@ -27,6 +27,7 @@ import NavBarItem from "./NavBarItem.vue";
   width: 100%;
   height: 96px;
   line-height: 96px;
+  box-shadow: 1.5px 0 12px 4px #939393;
 }
 
 img {

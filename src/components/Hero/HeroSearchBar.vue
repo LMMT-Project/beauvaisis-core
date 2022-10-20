@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import IconSearch from "./icons/IconSearch.vue";
+import IconSearch from "../icons/IconSearch.vue";
 </script>
 
 <template>
@@ -26,6 +26,7 @@ input {
   border-radius: 16px 0 0 16px;
   opacity: 0.6;
   vertical-align: top;
+  text-align: center;
 }
 
 input::placeholder {

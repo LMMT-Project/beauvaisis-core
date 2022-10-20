@@ -1,18 +1,17 @@
 <template>
-  <h2><slot></slot></h2>
+  <h1><slot></slot></h1>
 </template>
 
 <style scoped>
-h2 {
+h1 {
   text-align: center;
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 48px;
 }
-h2::after {
+h1::after {
   content: "";
   display: block;
   margin: 12px auto auto;
-  width: 154px;
+  width: 256px;
   border-bottom: 4px solid var(--light-blue);
 }
 </style>

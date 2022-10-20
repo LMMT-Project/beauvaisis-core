@@ -19,7 +19,7 @@ import HeroSearchBar from "./HeroSearchBar.vue";
 .hero-container {
   width: 100%;
   height: 95vh;
-  background-image: url("../assets/images/HeroBackground.png");
+  background-image: url("../../assets/images/HeroBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
 }

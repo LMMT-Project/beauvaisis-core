@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
-import TopPage from "./components/TopPage.vue";
+import TopPage from "./components/TopPage/TopPage.vue";
 </script>
 
 <template>

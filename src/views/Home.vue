@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Hero from "../components/Hero.vue";
-import QuickAcess from "../components/QuickAccess.vue";
+import Hero from "../components/Hero/Hero.vue";
+import QuickAcess from "../components/QuickAccess/QuickAccess.vue";
 </script>
 
 <template>

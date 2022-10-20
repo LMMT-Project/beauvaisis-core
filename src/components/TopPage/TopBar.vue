@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import IconMail from "./icons/IconMail.vue";
-import IconPhone from "./icons/IconPhone.vue";
-import IconFacebook from "./icons/IconFacebook.vue";
+import IconMail from "../icons/IconMail.vue";
+import IconPhone from "../icons/IconPhone.vue";
+import IconFacebook from "../icons/IconFacebook.vue";
 import TopBarIcon from "./TopBarIcon.vue";
 </script>
 
