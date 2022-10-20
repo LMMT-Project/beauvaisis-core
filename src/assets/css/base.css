@@ -1,0 +1,16 @@
+    :root {
+    /* ===== COLORS ===== */
+    --dark-blue: #18314f;
+    --light-blue: #8bbeb2;
+    --white: #fbfbff;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, serif;
+    background-color: var(--white);
+}
