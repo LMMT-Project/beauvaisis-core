@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <div class="breadcrumb">
     <ul>
-      <li v-for="item in path.split('/')">
+      <li v-for="item in path.split('/')" :key="item">
         {{ item }}
       </li>
     </ul>
