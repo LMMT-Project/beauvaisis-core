@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import TopBar from "./TopBar.vue";
-import NavBar from "./NavBar.vue";
+import TopBar from "./Topbar/TopBar.vue";
+import NavBar from "./Navbar/NavBar.vue";
 </script>
 
 <template>

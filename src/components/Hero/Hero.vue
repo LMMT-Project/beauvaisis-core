@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import HeroSearchBar from "./HeroSearchBar.vue";
+import HeroSearchBar from "./Items/HeroSearchBar.vue";
 </script>
 
 <template>
   <div class="hero-container">
-    <div class="hero-container-shadow">
+    <div class="hero-content">
       <div class="hero-title">
         <h1>Communauté d'agglomération du Beauvaisis</h1>
       </div>
@@ -17,32 +17,34 @@ import HeroSearchBar from "./HeroSearchBar.vue";
 
 <style scoped>
 .hero-container {
+  position: relative;
   width: 100%;
-  height: 95vh;
-  background-image: url("../assets/images/HeroBackground.png");
+  height: calc(95vh - var(--navBar-height) - var(--topBar-height));
+  background-image: url("../../assets/images/HeroBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
+
+  overflow: auto;
 }
 
-.hero-container-shadow {
-  display: inline-block;
-  width: 100%;
-  height: 95vh;
-  background: linear-gradient(
-    78.71deg,
-    rgba(66, 51, 51, 0.61) -14.18%,
-    rgba(88, 71, 71, 0.3111) 86.63%
-  );
-}
-
-.hero-cut {
+.hero-container::after {
+  content: "";
   position: absolute;
-  top: calc(95vh - 40px);
-  display: inline-block;
-  height: 0;
-  width: 0;
-  border-bottom: 5vh solid var(--white);
-  border-left: 100vw solid transparent;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    78deg,
+    rgba(66, 51, 51, 0.6) -14%,
+    rgba(88, 71, 71, 0.3) 86%
+  );
+
+  z-index: 10;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 20;
 }
 
 .hero-title {
@@ -60,10 +62,22 @@ h1 {
 h1::after {
   content: "";
   display: block;
-  margin: auto;
-  margin-top: 24px;
+  margin: 24px auto auto;
   width: 312px;
   border-bottom: 4px solid var(--light-blue);
   border-radius: 4px;
 }
+
+@media screen and (max-height: 750px) {
+  .hero-container {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-height: 850px) {
+  .hero-title {
+    width: 100%;
+  }
+}
+
 </style>

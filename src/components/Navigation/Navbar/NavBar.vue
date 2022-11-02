@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import NavBarItem from "./NavBarItem.vue";
+import NavBarItem      from "./NavBarItem.vue";
+import NavBarHamburger from "./NavBarHamburger.vue";
 </script>
 
 <template>
   <div class="navbar">
     <img
-      src="../assets/images/LogoAgglo.png"
+      src="../../../assets/images/LogoAgglo.png"
       alt="Logo agglomération Beauvaisis"
     />
+
+    <NavBarHamburger />
+
     <nav>
-      <NavBarItem text="L'agglo" href="/"></NavBarItem>
+      <NavBarItem text="L'agglo" href="/" isActive="true"></NavBarItem>
       <NavBarItem text="Text" href="#"></NavBarItem>
       <NavBarItem text="Text" href="#"></NavBarItem>
       <NavBarItem text="Text" href="#"></NavBarItem>
@@ -25,7 +29,7 @@ import NavBarItem from "./NavBarItem.vue";
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 96px;
+  height: var(--navBar-height);
   line-height: 96px;
 }
 

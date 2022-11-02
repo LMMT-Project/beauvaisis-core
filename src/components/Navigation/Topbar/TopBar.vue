@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import IconMail from "./icons/IconMail.vue";
-import IconPhone from "./icons/IconPhone.vue";
-import IconFacebook from "./icons/IconFacebook.vue";
+import IconMail from "../../icons/IconMail.vue";
+import IconPhone from "../../icons/IconPhone.vue";
+import IconFacebook from "../../icons/IconFacebook.vue";
 import TopBarIcon from "./TopBarIcon.vue";
 </script>
 
@@ -19,7 +19,7 @@ import TopBarIcon from "./TopBarIcon.vue";
 .top-bar {
   display: flex;
   width: 100%;
-  height: 64px;
+  height: var(--topBar-height);
   background-color: var(--dark-blue);
   align-items: center;
   justify-content: end;

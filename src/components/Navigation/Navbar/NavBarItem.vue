@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  defineProps<{
-    text: {
-      type: string,
-      default: "Text",
-    },
-    href: string,
+defineProps<{
+  text: {
+    type: string;
+    default: "Text";
+  };
+  href: string;
 }>();
 </script>
 
