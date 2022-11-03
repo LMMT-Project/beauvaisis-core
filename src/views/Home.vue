@@ -7,4 +7,3 @@ import QuickAccess from "../components/QuickAccess/QuickAccess.vue";
   <Hero></Hero>
   <QuickAccess></QuickAccess>
 </template>
-

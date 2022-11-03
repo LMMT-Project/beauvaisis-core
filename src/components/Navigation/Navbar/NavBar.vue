@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NavBarItem      from "./NavBarItem.vue";
+import NavBarItem from "./NavBarItem.vue";
 import NavBarHamburger from "./NavBarHamburger.vue";
 </script>
 

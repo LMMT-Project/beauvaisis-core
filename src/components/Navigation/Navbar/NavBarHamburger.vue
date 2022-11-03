@@ -1,4 +1,3 @@
-
 <template>
   <div class="hamburger-ctx">
     <input class="hamburger-checkbox" type="checkbox" id="hamburger-checkbox" />
@@ -9,7 +8,6 @@
 </template>
 
 <style scoped>
-
 .hamburger-icon {
   cursor: pointer;
   display: inline-block;
@@ -24,17 +22,18 @@
   display: block;
   height: 2px;
   position: relative;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   width: 18px;
 }
 
-.navicon::before, .navicon::after {
+.navicon::before,
+.navicon::after {
   background: var(--dark-blue);
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   position: absolute;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   width: 100%;
 }
 
@@ -47,7 +46,7 @@
 }
 
 .hamburger-checkbox {
-  display: none
+  display: none;
 }
 
 .hamburger-checkbox:checked ~ .hamburger-icon .navicon {
@@ -63,6 +62,4 @@
   transform: rotate(45deg);
   top: 0;
 }
-
-
 </style>

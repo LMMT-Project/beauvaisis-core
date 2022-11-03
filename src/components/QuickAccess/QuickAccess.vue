@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import QuickAccessButton from "./QuickAccessButton.vue";
-import SectionTitle      from "../Utils/SectionTitle.vue";
+import SectionTitle from "../Utils/SectionTitle.vue";
 </script>
 
 <template>
@@ -16,10 +16,9 @@ import SectionTitle      from "../Utils/SectionTitle.vue";
 </template>
 
 <style scoped>
-
 .quickaccess-container {
   width: 80vw;
-  margin: .6rem auto .6rem;
+  margin: 0.6rem auto 0.6rem;
 }
 
 .quickaccess-title {
@@ -42,5 +41,4 @@ import SectionTitle      from "../Utils/SectionTitle.vue";
     justify-content: space-around;
   }
 }
-
 </style>

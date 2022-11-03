@@ -3,22 +3,17 @@ import IconMessage from "../icons/IconMessage.vue";
 </script>
 
 <template>
-
   <div class="QA-button">
-
     <IconMessage class="QA-icon" />
     <a class="QA-arrow" href="#">
       <span class="QA-text">
         <slot />
       </span>
     </a>
-
   </div>
-
 </template>
 
 <style scoped>
-
 .QA-icon {
   position: absolute;
 
@@ -71,7 +66,7 @@ import IconMessage from "../icons/IconMessage.vue";
 
   position: absolute;
 
-  content: '';
+  content: "";
 
   width: 0;
   height: 0;
@@ -87,7 +82,7 @@ import IconMessage from "../icons/IconMessage.vue";
   --front-arrow: 34px;
   --arrow-size: 16px;
 
-  content: '';
+  content: "";
 
   position: absolute;
   right: calc(-1 * var(--front-arrow) / 2 + 1px);
@@ -96,9 +91,8 @@ import IconMessage from "../icons/IconMessage.vue";
   height: 0;
   border-style: solid;
 
-  border-width: calc(var(--arrow-height) / 2) 0 calc(var(--arrow-height) / 2) var(--arrow-size);
+  border-width: calc(var(--arrow-height) / 2) 0 calc(var(--arrow-height) / 2)
+    var(--arrow-size);
   border-color: transparent transparent transparent var(--light-blue);
-
 }
-
 </style>

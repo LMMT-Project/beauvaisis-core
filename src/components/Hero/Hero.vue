@@ -79,5 +79,4 @@ h1::after {
     width: 100%;
   }
 }
-
 </style>
