@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import IconDateTime from "./icons/IconDateTime.vue";
+import IconDateTime from "../icons/IconDateTime.vue";
 
 defineProps<{
   date: Date;
 }>();
-
 </script>
 
 <template>
   <div class="datetime">
-    <IconDateTime></IconDateTime>
+    <IconDateTime />
     <p>{{ date }}</p>
   </div>
 </template>

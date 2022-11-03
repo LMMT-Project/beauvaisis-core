@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import QuickAccessButton from "./QuickAccessButton.vue";
-import SectionTitle from "../SectionTitle.vue";
+import SectionTitle from "../Article/SectionTitle.vue";
 </script>
 
 <template>

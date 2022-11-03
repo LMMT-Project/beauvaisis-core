@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import ArticleTitle from "../components/Title.vue";
-import Tag from "../components/Tag.vue";
-import Breadcrumb from "../components/Breadcrumb.vue";
-import ShortDescription from "../components/ShortDescription.vue";
-import DateTime from "../components/DateTime.vue";
+import ArticleTitle from "../components/Article/Title.vue";
+import Tag from "../components/Article/Tag.vue";
+import Breadcrumb from "../components/Article/Breadcrumb.vue";
+import ShortDescription from "../components/Article/ShortDescription.vue";
+import DateTime from "../components/Article/DateTime.vue";
 </script>
 
 <template>
   <article>
-    <Breadcrumb path="Home/Articles/Cette Article"></Breadcrumb>
+    <Breadcrumb path="Home/Articles/Cette Article" />
 
     <div class="tags">
+      <Tag>tags</Tag>
       <Tag>MAJUSCULE</Tag>
     </div>
 
@@ -20,7 +21,7 @@ import DateTime from "../components/DateTime.vue";
       This is a short description of this article. It can have multiple lines
     </ShortDescription>
 
-    <DateTime date="01/01/2001 00:01"></DateTime>
+    <DateTime date="01/01/2001 00:01" />
     <!--
       Breadcrumb
       Tags
