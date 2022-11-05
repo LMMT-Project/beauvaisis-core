@@ -4,9 +4,9 @@
 
 <style scoped>
 h2 {
+  background-color: transparent;
   text-align: center;
-
-  margin: 1rem 0;
+  font-size: 2rem;
 }
 h2::after {
   content: "";

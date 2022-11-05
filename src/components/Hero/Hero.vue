@@ -1,18 +1,22 @@
 <script setup lang="ts">
 import HeroSearchBar from "./Items/HeroSearchBar.vue";
+import HeroWaves     from "@/components/Hero/HeroWaves.vue";
 </script>
 
 <template>
-  <div class="hero-container">
+  <section class="hero-container">
     <div class="hero-content">
       <div class="hero-title">
         <h1>Communauté d'agglomération du Beauvaisis</h1>
       </div>
-      <HeroSearchBar></HeroSearchBar>
-      <!-- <div class="hero-cut"></div> -->
-      <!-- TODO: Quick access element -->
+      <HeroSearchBar />
+
     </div>
-  </div>
+
+
+    <HeroWaves />
+  </section>
+
 </template>
 
 <style scoped>
@@ -48,7 +52,6 @@ import HeroSearchBar from "./Items/HeroSearchBar.vue";
 }
 
 .hero-title {
-  width: 60vw;
   margin: 130px auto auto;
 }
 
@@ -70,7 +73,8 @@ h1::after {
 
 @media screen and (max-height: 750px) {
   .hero-container {
-    height: 100vh;
+    height: min(100vh, 100%);
+    padding: 2rem 0;
   }
 }
 

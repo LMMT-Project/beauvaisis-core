@@ -38,4 +38,13 @@ import TopBarIcon from "./TopBarIcon.vue";
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@media screen and (max-width: 520px) {
+  .top-bar {
+    justify-content: center;
+  }
+  .icons-container {
+    margin: auto;
+  }
+}
 </style>

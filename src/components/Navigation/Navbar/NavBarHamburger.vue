@@ -1,11 +1,17 @@
+<script setup lang="ts">
+const getInputValue = () => (document.getElementById("hamburger-checkbox") as HTMLInputElement)?.checked;
+</script>
+
 <template>
   <div class="hamburger-ctx">
-    <input class="hamburger-checkbox" type="checkbox" id="hamburger-checkbox" />
+    <input class="hamburger-checkbox" type="checkbox" id="hamburger-checkbox"
+           @change="$emit('inputchecked', getInputValue())" />
     <label class="hamburger-icon" for="hamburger-checkbox">
       <span class="navicon"></span>
     </label>
   </div>
 </template>
+
 
 <style scoped>
 .hamburger-icon {
@@ -20,10 +26,10 @@
 .navicon {
   background: var(--dark-blue);
   display: block;
-  height: 2px;
+  height: 4px;
   position: relative;
   transition: all 0.2s ease-out;
-  width: 18px;
+  width: 36px;
 }
 
 .navicon::before,
@@ -38,11 +44,11 @@
 }
 
 .navicon::before {
-  top: 5px;
+  top: 10px;
 }
 
 .navicon::after {
-  top: -5px;
+  top: -10px;
 }
 
 .hamburger-checkbox {
