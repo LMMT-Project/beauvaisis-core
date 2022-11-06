@@ -33,4 +33,10 @@ defineProps<{
 .datetime p {
   margin: auto 5px auto 40px;
 }
+
+@media screen and (max-width: 800px) {
+  .datetime {
+    border-radius: 20px;
+  }
+}
 </style>

@@ -33,7 +33,6 @@ defineProps<{
 
 span {
   color: var(--white);
-  list-style-type: none;
   margin: auto;
 }
 
@@ -62,5 +61,10 @@ a {
   color: var(--white);
   text-decoration: none;
   text-transform: capitalize;
+}
+@media screen and (max-width: 800px) {
+  .breadcrumb {
+    border-radius: 20px;
+  }
 }
 </style>

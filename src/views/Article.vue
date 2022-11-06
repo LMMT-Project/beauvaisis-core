@@ -11,6 +11,7 @@ import DateTime from "../components/Article/DateTime.vue";
   <article>
     <div class="article-header-container">
       <div class="article-header-content">
+
         <div class="article-header-top">
           <div class="article-breadcrumb">
             <Breadcrumb path="Home/Articles/Cet Article" />
@@ -110,13 +111,14 @@ import DateTime from "../components/Article/DateTime.vue";
   justify-content: space-between;
   height: 40px;
 }
-/*SALUT GERANDE DINDE*/ /* tg */
+
 .article-header-bot {
   height: 80%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
 }
+
 .article-header-tags-title .article-title {
   margin-top: 20px;
 }
@@ -130,9 +132,6 @@ import DateTime from "../components/Article/DateTime.vue";
 .article-body {
   width: 80%;
   margin: auto;
-}
-
-.article-body {
   margin-top: 50px;
   font-size: 24px;
 }
@@ -140,5 +139,20 @@ import DateTime from "../components/Article/DateTime.vue";
 .article-body p {
   margin-bottom: 50px;
   text-align: justify;
+}
+
+@media screen and (max-width: 800px) {
+  .article-header-top {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+  }
+
+  .article-breadcrumb,
+  .article-datetime {
+    width: max-content;
+    margin: auto;
+    height: 40px;
+  }
 }
 </style>
