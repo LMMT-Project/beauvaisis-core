@@ -18,16 +18,13 @@ defineProps<{
 </template>
 
 <style scoped>
-.breadcrumb {
-  margin-bottom: 50px;
-}
 ul {
   display: flex;
   padding-inline-start: 0;
   width: max-content;
   background-color: var(--light-blue);
-  border-radius: 0 100px 100px 0;
-  padding: 20px 50px;
+  border-radius: 0 0 20px 0;
+  padding: 20px 40px 20px 20px;
 }
 li {
   color: var(--white);

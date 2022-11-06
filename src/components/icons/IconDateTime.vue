@@ -2,10 +2,10 @@
   <svg
       x="0px"
       y="0px"
-      width="16"
-      height="16"
+      width="24"
+      height="24"
       viewBox="0 0 466.008 466.008"
-      style="enable-background:new 0 0 466.008 466.008;"
+      style="fill: var(--white);"
   >
 		<g>
 			<path d="M233.004,0C104.224,0,0,104.212,0,233.004c0,128.781,104.212,233.004,233.004,233.004
