@@ -27,7 +27,6 @@ import HeroWaves     from "@/components/Hero/HeroWaves.vue";
   background-image: url("../../assets/images/HeroBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
-
   overflow: auto;
 }
 

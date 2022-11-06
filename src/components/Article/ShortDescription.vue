@@ -6,9 +6,8 @@
 
 <style scoped>
 .short-description {
-  width: 50%;
+  width: 60%;
   margin: auto;
-  margin-top: 50px;
 }
 h2 {
   text-align: center;

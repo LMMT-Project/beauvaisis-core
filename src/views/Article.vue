@@ -10,16 +10,24 @@ import DateTime from "../components/Article/DateTime.vue";
   <article>
     <Breadcrumb path="Home/Articles/Cette Article" />
 
-    <div class="tags">
-      <Tag>tags</Tag>
-      <Tag>MAJUSCULE</Tag>
+<!--    bg image de l'image de présentation (comme le hero)-->
+    <div class="article-header-container">
+      <div class="article-header-content">
+        <div class="article-tags">
+          <Tag>tags</Tag>
+          <Tag>MAJUSCULE</Tag>
+        </div>
+        <div class="article-title">
+          <ArticleTitle>Titre de l'article</ArticleTitle>
+        </div>
+        <div class="article-description">
+          <ShortDescription class="article-description">
+            This is a short description of this article. It can have multiple lines
+          </ShortDescription>
+        </div>
+      </div>
     </div>
 
-    <ArticleTitle>Titre de l'article</ArticleTitle>
-
-    <ShortDescription>
-      This is a short description of this article. It can have multiple lines
-    </ShortDescription>
 
     <DateTime date="01/01/2001 00:01" />
     <!--
@@ -38,11 +46,46 @@ import DateTime from "../components/Article/DateTime.vue";
 article {
   margin-top: 50px;
 }
+.article-header-container {
+  position: relative;
+  width: 100%;
+  height: calc(95vh - var(--navBar-height) - var(--topBar-height));
+  background-image: url("../assets/images/HeroBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: auto;
+}
+.article-header-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      78deg,
+      rgba(66, 51, 51, 0.6) -14%,
+      rgba(88, 71, 71, 0.3) 86%
+  );
+  z-index: 10;
+}
 
-.tags {
+.article-header-content {
+  position: relative;
+  z-index: 20;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+.article-tags {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin-bottom: 50px;
+}
+.article-title {
+  color: var(--white);
+}
+.article-description {
+  color: var(--white);
 }
 </style>
