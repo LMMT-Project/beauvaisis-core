@@ -1,5 +1,5 @@
 <template>
-  <div class="news-item">
+  <a class="news-item">
     <div class="news-img"></div>
 
     <div class="news-arrow">
@@ -9,17 +9,18 @@
         </p>
       </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <style scoped>
 .news-item {
   position: relative;
-
+  display: block;
   height: 100%;
   width: 100%;
-  background-color: var(--light-blue);
+  background-color: var(--active);
   border-radius: 6.9mm;
+  cursor: pointer;
 }
 
 .news-img {
@@ -34,7 +35,6 @@
   --arrow-height: 70px;
 
   display: block;
-  cursor: pointer;
 
   position: absolute;
   height: var(--arrow-height);
@@ -46,7 +46,7 @@
   transition: all 0.25s ease-out;
 }
 
-.news-arrow:hover {
+.news-item:hover .news-arrow {
   width: calc(100% + var(--back-arrow) + 16px);
 }
 
@@ -63,7 +63,7 @@
   color: var(--white);
 }
 
-.news-arrow:hover .arrow-text {
+.news-item:hover .arrow-text {
   display: inline;
   position: absolute;
   top: 16px;

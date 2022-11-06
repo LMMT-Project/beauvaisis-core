@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import IconMessage from "../icons/IconMessage.vue";
-
 defineProps<{
   href: string;
 }>();
@@ -8,10 +6,12 @@ defineProps<{
 
 <template>
   <a class="QA-button" :href="href">
-    <IconMessage class="QA-icon" />
+    <span class="QA-icon">
+      <slot name="icon" />
+    </span>
     <div class="QA-arrow">
       <span class="QA-text">
-        <slot />
+        <slot name="text" />
       </span>
     </div>
   </a>
@@ -20,6 +20,7 @@ defineProps<{
 <style scoped>
 .QA-icon {
   position: absolute;
+  fill: white;
 
   width: 60px;
   height: 60px;

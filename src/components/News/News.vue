@@ -38,7 +38,7 @@ svg {
 }
 
 svg path {
-  fill: var(--active);
+  fill: var(--light-blue);
 }
 
 .news-container {
@@ -46,7 +46,7 @@ svg path {
 }
 
 .news-context {
-  background-color: var(--active);
+  background-color: var(--light-blue);
 }
 
 .first-actu {
