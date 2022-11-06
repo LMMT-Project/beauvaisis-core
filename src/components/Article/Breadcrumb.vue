@@ -18,7 +18,6 @@ defineProps<{
 </template>
 
 <style scoped>
-
 .breadcrumb {
   position: relative;
   height: 100%;

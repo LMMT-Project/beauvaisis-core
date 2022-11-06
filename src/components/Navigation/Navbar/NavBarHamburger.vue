@@ -1,17 +1,21 @@
 <script setup lang="ts">
-const getInputValue = () => (document.getElementById("hamburger-checkbox") as HTMLInputElement)?.checked;
+const getInputValue = () =>
+  (document.getElementById("hamburger-checkbox") as HTMLInputElement)?.checked;
 </script>
 
 <template>
   <div class="hamburger-ctx">
-    <input class="hamburger-checkbox" type="checkbox" id="hamburger-checkbox"
-           @change="$emit('inputchecked', getInputValue())" />
+    <input
+      class="hamburger-checkbox"
+      type="checkbox"
+      id="hamburger-checkbox"
+      @change="$emit('inputchecked', getInputValue())"
+    />
     <label class="hamburger-icon" for="hamburger-checkbox">
       <span class="navicon"></span>
     </label>
   </div>
 </template>
-
 
 <style scoped>
 .hamburger-icon {

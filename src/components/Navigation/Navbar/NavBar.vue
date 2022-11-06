@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import NavBarItem      from "./NavBarItem.vue";
+import NavBarItem from "./NavBarItem.vue";
 import NavBarHamburger from "./NavBarHamburger.vue";
 
 const valueChanged = (value: boolean) => {
-  const navbarItems   = document.getElementById("navbarItems"),
-        showClassName = "show";
-  if(!navbarItems) return;
+  const navbarItems = document.getElementById("navbarItems"),
+    showClassName = "show";
+  if (!navbarItems) return;
 
-  value ? navbarItems.classList.add(showClassName) : navbarItems.classList.remove(showClassName);
+  value
+    ? navbarItems.classList.add(showClassName)
+    : navbarItems.classList.remove(showClassName);
 };
-
 </script>
 
 <template>
@@ -24,16 +25,24 @@ const valueChanged = (value: boolean) => {
     <NavBarHamburger class="navbar-hamburger" @inputchecked="valueChanged" />
 
     <div class="navbar-items" id="navbarItems">
-      <NavBarItem class="navbar-item" text="L'agglo" href="/" isActive="true"></NavBarItem>
+      <NavBarItem
+        class="navbar-item"
+        text="L'agglo"
+        href="/"
+        isActive="true"
+      ></NavBarItem>
       <NavBarItem class="navbar-item" text="Text" href="#"></NavBarItem>
       <NavBarItem class="navbar-item" text="Text" href="#"></NavBarItem>
-      <NavBarItem class="navbar-item" text="Text" href="#"></NavBarItem>
+      <NavBarItem
+        class="navbar-item"
+        text="Contact"
+        href="/contact"
+      ></NavBarItem>
     </div>
   </nav>
 </template>
 
 <style scoped>
-
 .navbar {
   background-color: var(--white);
   display: flex;
@@ -73,7 +82,6 @@ img {
 }
 
 @media screen and (max-width: 1105px) {
-
   .navbar {
     flex-direction: column;
     height: 100%;
@@ -101,7 +109,6 @@ img {
     max-height: 100%;
   }
 
-
   .navbar-items > * {
     min-height: var(--navBar-height);
   }
@@ -113,5 +120,4 @@ img {
     top: calc(var(--navBar-height) / 2);
   }
 }
-
 </style>

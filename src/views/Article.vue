@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HeroWave from "../components/Hero/HeroWaves.vue"
+import HeroWave from "../components/Hero/HeroWaves.vue";
 import ArticleTitle from "../components/Article/Title.vue";
 import Tag from "../components/Article/Tag.vue";
 import Breadcrumb from "../components/Article/Breadcrumb.vue";
@@ -32,9 +32,10 @@ import DateTime from "../components/Article/DateTime.vue";
           </div>
           <div class="article-description">
             <ShortDescription class="article-description">
-              This is a short description of this article. It can have multiple lines
-              Adipisci decore deseruisse viverra mollis accumsan.
-              Non vituperatoribus suscipit natum pulvinar maiorum scelerisque referrentur.
+              This is a short description of this article. It can have multiple
+              lines Adipisci decore deseruisse viverra mollis accumsan. Non
+              vituperatoribus suscipit natum pulvinar maiorum scelerisque
+              referrentur.
             </ShortDescription>
           </div>
         </div>
@@ -44,20 +45,28 @@ import DateTime from "../components/Article/DateTime.vue";
 
     <div class="article-body">
       <p>
-        PARAGRAPHE 1
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque deleniti dolor, est eum, harum ipsam itaque iusto laudantium libero maiores neque nesciunt numquam quasi quos, repellat repudiandae unde ut.
+        PARAGRAPHE 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Cum cumque deleniti dolor, est eum, harum ipsam itaque iusto laudantium
+        libero maiores neque nesciunt numquam quasi quos, repellat repudiandae
+        unde ut.
       </p>
       <p>
-        PARAGRAPHE 2
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto consequuntur debitis dolor error et harum ipsum labore libero maxime mollitia nam nemo neque nobis ratione repellendus, voluptate? Esse, similique.
+        PARAGRAPHE 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Aliquid architecto consequuntur debitis dolor error et harum ipsum
+        labore libero maxime mollitia nam nemo neque nobis ratione repellendus,
+        voluptate? Esse, similique.
       </p>
       <p>
-        PARAGRAPHE 3
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus doloremque esse facere id incidunt ipsa laborum magni minus molestias officiis perferendis, quasi quibusdam quis ratione sunt unde vel voluptas! Laboriosam!
+        PARAGRAPHE 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Delectus doloremque esse facere id incidunt ipsa laborum magni minus
+        molestias officiis perferendis, quasi quibusdam quis ratione sunt unde
+        vel voluptas! Laboriosam!
       </p>
       <p>
-        PARAGRAPHE 4
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur, at consectetur, eaque facere fugit inventore ipsam labore magnam odit quae quam quis repellat sed sunt tempore voluptate. A, beatae?
+        PARAGRAPHE 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Aliquam aspernatur, at consectetur, eaque facere fugit inventore ipsam
+        labore magnam odit quae quam quis repellat sed sunt tempore voluptate.
+        A, beatae?
       </p>
     </div>
   </article>
@@ -81,9 +90,9 @@ import DateTime from "../components/Article/DateTime.vue";
   width: 100%;
   height: 100%;
   background: linear-gradient(
-      78deg,
-      rgba(66, 51, 51, 0.6) -14%,
-      rgba(88, 71, 71, 0.3) 86%
+    78deg,
+    rgba(66, 51, 51, 0.6) -14%,
+    rgba(88, 71, 71, 0.3) 86%
   );
   z-index: 10;
 }

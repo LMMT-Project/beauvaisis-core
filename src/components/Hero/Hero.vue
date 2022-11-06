@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import HeroSearchBar from "./Items/HeroSearchBar.vue";
-import HeroWaves     from "@/components/Hero/HeroWaves.vue";
+import HeroWaves from "@/components/Hero/HeroWaves.vue";
 </script>
 
 <template>
@@ -13,7 +13,6 @@ import HeroWaves     from "@/components/Hero/HeroWaves.vue";
     </div>
     <HeroWaves />
   </section>
-
 </template>
 
 <style scoped>

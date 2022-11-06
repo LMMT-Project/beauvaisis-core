@@ -1,7 +1,5 @@
 <template>
-
   <div class="news-item">
-
     <div class="news-img"></div>
 
     <div class="news-arrow">
@@ -11,14 +9,10 @@
         </p>
       </div>
     </div>
-
   </div>
-
 </template>
 
-
 <style scoped>
-
 .news-item {
   position: relative;
 
@@ -106,8 +100,8 @@
   height: 0;
   border-style: solid;
 
-  border-width: calc(var(--arrow-height) / 2) 0 calc(var(--arrow-height) / 2) var(--arrow-size);
+  border-width: calc(var(--arrow-height) / 2) 0 calc(var(--arrow-height) / 2)
+    var(--arrow-size);
   border-color: transparent transparent transparent var(--dark-blue);
 }
-
 </style>

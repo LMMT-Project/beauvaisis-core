@@ -30,7 +30,6 @@ defineProps<{
   transform: translateY(-50%);
 }
 
-
 .datetime p {
   margin: auto 5px auto 40px;
 }
