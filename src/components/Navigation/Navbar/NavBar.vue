@@ -94,7 +94,7 @@ img {
   display: none;
 }
 
-@media screen and (max-width: 1105px) {
+@media screen and (max-width: 1590px) {
   .navbar {
     flex-direction: column;
     height: 100%;

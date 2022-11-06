@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import SectionTitle from "../Utils/SectionTitle.vue";
-import NewsItem from "./Items/NewsItem.vue";
+import NewsItem     from "./Items/NewsItem.vue";
 </script>
 
 <template>
@@ -14,18 +14,25 @@ import NewsItem from "./Items/NewsItem.vue";
 
     <div class="news-context">
       <SectionTitle class="quickaccess-title"
-        >Dernières Actualités</SectionTitle
+      >Dernières Actualités
+      </SectionTitle
       >
 
       <div class="actus">
         <div class="first-actu">
-          <news-item />
+          <news-item link="https://plui.beauvaisis.fr/"
+                     img-link="url(https://plui.beauvaisis.fr/wp-content/uploads/2022/05/tille-slider.jpg)"
+                     text="La communauté d’agglomération du Beauvaisis s’est engagée dans l’élaboration du Plan Local d’Urbanisme Intercommunal valant Habitat et Mobilités." />
         </div>
         <div class="second-actu">
-          <news-item />
+          <news-item link="https://www.beauvaisisnotreterritoire.fr/"
+                     img-link="url(https://www.beauvaisisnotreterritoire.fr/templates/yootheme/cache/2210-bnt-5e563f10.jpeg)"
+                     text="Découvrez le magazine de l'agglomération !" />
         </div>
         <div class="third-actu">
-          <news-item />
+          <news-item link="https://limesurvey.beauvaisis.fr/index.php/656818?lang=fr"
+                     img-link="url(http://www.beauvaisis.fr/images/actus/2210-affiche-enquete-alimentaire.jpg)"
+                     text="Projet alimentaire territorial : répondez à l’enquête !" />
         </div>
       </div>
     </div>
@@ -57,18 +64,36 @@ svg path {
 
 .second-actu {
   grid-area: s;
+  height: 40vh;
 }
 
 .third-actu {
   grid-area: t;
+  height: 40vh;
+
 }
 
 .actus {
   width: 90vw;
+  height: 100%;
   margin: 0 auto;
   padding: 1rem 0;
   display: grid;
   grid-template-areas: "f f f f s s" "f f f f t t";
   gap: 32px 64px;
+}
+
+@media screen and (max-width: 950px) {
+
+  .actus {
+    width: 80vw;
+    grid-template-areas: "f" "s" "t";
+  }
+
+  .actus div {
+    width: 100%;
+    height: 80vh;
+  }
+
 }
 </style>

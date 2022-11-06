@@ -5,6 +5,8 @@ import Footer from "./components/Footer/Footer.vue";
 </script>
 
 <template>
+
+
   <div v-if="this.$route.name !== 'PageNotFound'">
     <TopPage />
   </div>

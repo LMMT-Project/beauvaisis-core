@@ -19,13 +19,14 @@ import ContactSubmit from "../components/Contact/ContactSubmit.vue";
             name="nom"
             label="Nom"
             placeholder="Votre nom"
-          />
+           type="text"/>
           <ContactInput
             class="contactus-input"
             inputid="contactus-prenom"
             name="prenom"
             label="Prénom"
             placeholder="Votre prénom"
+            type="text"
           />
           <ContactInput
             class="contactus-input"
@@ -86,6 +87,7 @@ import ContactSubmit from "../components/Contact/ContactSubmit.vue";
 .contactinfo-body {
   width: 20vw;
   text-align: center;
+  margin: 0 auto;
 }
 
 .contact-info-body-item {
@@ -113,5 +115,21 @@ import ContactSubmit from "../components/Contact/ContactSubmit.vue";
 
 .contactus-input {
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1380px) {
+
+  .contact-page {
+    flex-direction: column;
+  }
+
+  .contact-page > * {
+    margin: 20px 0;
+  }
+
+  .contactinfo-page {
+    order: -1;
+  }
+
 }
 </style>

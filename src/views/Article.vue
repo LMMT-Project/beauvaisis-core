@@ -1,10 +1,35 @@
 <script setup lang="ts">
-import HeroWave from "../components/Hero/HeroWaves.vue";
+import HeroWave     from "../components/Hero/HeroWaves.vue";
 import ArticleTitle from "../components/Article/Title.vue";
-import Tag from "../components/Article/Tag.vue";
-import Breadcrumb from "../components/Article/Breadcrumb.vue";
-import ShortDescription from "../components/Article/ShortDescription.vue";
-import DateTime from "../components/Article/DateTime.vue";
+import Tag          from "../components/Article/Tag.vue";
+import Breadcrumb   from "../components/Article/Breadcrumb.vue";
+import DateTime     from "../components/Article/DateTime.vue";
+import { ref, type Ref }      from "vue";
+
+let title = ref(""),
+    slug = ref(""),
+    content = ref(""),
+    tags: Ref<string[]> = ref([]);
+
+slug.value =  location.href.split("/")[location.href.split("/").length - 1];
+
+let pathv = `Home/${tags.value[0]}/${title.value}`
+
+console.log(slug);
+
+
+fetch(`http://127.0.0.1:3333/news/${slug.value}`)
+  .then(res => res.json())
+  .then(res => {
+    title.value = res.title;
+    slug.value = res.slug;
+    content.value = res.content;
+
+    for(const tag of res.tags) {
+      tags.value = [...tags.value, tag.name];
+    }
+  });
+
 </script>
 
 <template>
@@ -13,7 +38,7 @@ import DateTime from "../components/Article/DateTime.vue";
       <div class="article-header-content">
         <div class="article-header-top">
           <div class="article-breadcrumb">
-            <Breadcrumb path="Home/Articles/Cet Article" />
+            <Breadcrumb :path="pathv" />
           </div>
           <div class="article-datetime">
             <DateTime date="01/01/2001 00:01" />
@@ -23,51 +48,18 @@ import DateTime from "../components/Article/DateTime.vue";
         <div class="article-header-bot">
           <div class="article-header-tags-title">
             <div class="article-tags">
-              <Tag>tags</Tag>
-              <Tag>MAJUSCULE</Tag>
+              <Tag v-for="tag in tags" :key="tag">{{ tag }}</Tag>
             </div>
             <div class="article-title">
-              <ArticleTitle>Titre de l'article</ArticleTitle>
+              <ArticleTitle>{{title}}</ArticleTitle>
             </div>
-          </div>
-          <div class="article-description">
-            <ShortDescription class="article-description">
-              This is a short description of this article. It can have multiple
-              lines Adipisci decore deseruisse viverra mollis accumsan. Non
-              vituperatoribus suscipit natum pulvinar maiorum scelerisque
-              referrentur.
-            </ShortDescription>
           </div>
         </div>
       </div>
       <HeroWave />
     </div>
 
-    <div class="article-body">
-      <p>
-        PARAGRAPHE 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Cum cumque deleniti dolor, est eum, harum ipsam itaque iusto laudantium
-        libero maiores neque nesciunt numquam quasi quos, repellat repudiandae
-        unde ut.
-      </p>
-      <p>
-        PARAGRAPHE 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Aliquid architecto consequuntur debitis dolor error et harum ipsum
-        labore libero maxime mollitia nam nemo neque nobis ratione repellendus,
-        voluptate? Esse, similique.
-      </p>
-      <p>
-        PARAGRAPHE 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Delectus doloremque esse facere id incidunt ipsa laborum magni minus
-        molestias officiis perferendis, quasi quibusdam quis ratione sunt unde
-        vel voluptas! Laboriosam!
-      </p>
-      <p>
-        PARAGRAPHE 4 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Aliquam aspernatur, at consectetur, eaque facere fugit inventore ipsam
-        labore magnam odit quae quam quis repellat sed sunt tempore voluptate.
-        A, beatae?
-      </p>
+    <div class="article-body" v-html="content">
     </div>
   </article>
 </template>
@@ -130,14 +122,31 @@ import DateTime from "../components/Article/DateTime.vue";
 
 .article-body {
   width: 80%;
-  margin: auto;
-  margin-top: 50px;
+  margin: 50px auto auto;
   font-size: 24px;
 }
 
 .article-body p {
   margin-bottom: 50px;
   text-align: justify;
+}
+
+@media screen and (max-height: 750px) {
+  .article-header-container {
+    height: min(100vh, 100%);
+    padding: 4rem 0;
+  }
+
+  .article-tags {
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-height: 850px) {
+  .article-title {
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width: 800px) {

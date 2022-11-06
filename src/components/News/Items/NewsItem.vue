@@ -1,11 +1,23 @@
+<script setup lang="ts">
+
+defineProps<{
+
+  imgLink: string;
+  text: string;
+  link: string;
+
+}>();
+
+</script>
+
 <template>
-  <a class="news-item">
-    <div class="news-img"></div>
+  <a class="news-item" :href="link">
+    <div class="news-img" :src="imgLink" alt="Article Beauvaisis"> </div>
 
     <div class="news-arrow">
       <div class="arrow-ctx">
         <p class="arrow-text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+         {{text}}
         </p>
       </div>
     </div>
@@ -24,8 +36,11 @@
 }
 
 .news-img {
-  background-color: coral;
+  display: block;
   border-radius: 6.9mm 6.9mm 0 0;
+  background-size: contain;
+  background-position: center center;
+  background-image: v-bind(imgLink);
   height: calc(100% - 128px);
   width: 100%;
 }
@@ -81,7 +96,7 @@
   height: 0;
   border-style: solid;
   border-width: 0 0 var(--triangle-size) var(--triangle-size);
-  border-color: transparent transparent var(--light-blue) transparent;
+  border-color: transparent transparent var(--active) transparent;
 
   top: calc(-1 * var(--triangle-size));
 }
@@ -104,4 +119,20 @@
     var(--arrow-size);
   border-color: transparent transparent transparent var(--dark-blue);
 }
+
+@media screen and (max-width: 950px) {
+
+  .news-arrow {
+    width: calc(100% + var(--back-arrow) + 16px);
+  }
+
+  .arrow-text {
+    display: inline;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+
+}
+
 </style>

@@ -26,6 +26,7 @@ input {
   border-radius: 16px 0 0 16px;
   opacity: 0.6;
   vertical-align: top;
+  text-align: center;
 }
 
 input::placeholder {
