@@ -27,16 +27,29 @@ const valueChanged = (value: boolean) => {
     <div class="navbar-items" id="navbarItems">
       <NavBarItem
         class="navbar-item"
-        text="L'agglo"
+        text="Accueil"
         href="/"
         isActive="true"
       ></NavBarItem>
-      <NavBarItem class="navbar-item" text="Text" href="#"></NavBarItem>
-      <NavBarItem class="navbar-item" text="Text" href="#"></NavBarItem>
       <NavBarItem
         class="navbar-item"
-        text="Text"
-        href="#"
+        text="Présentation"
+        href="/news/presentation-generale"
+      ></NavBarItem>
+      <NavBarItem
+        class="navbar-item"
+        text="Actualité"
+        href="/news"
+      ></NavBarItem>
+      <NavBarItem
+        class="navbar-item"
+        text="Tourisme"
+        href="/news/tourisme"
+      ></NavBarItem>
+      <NavBarItem
+        class="navbar-item"
+        text="Contact"
+        href="/contact"
       ></NavBarItem>
     </div>
   </nav>

@@ -22,6 +22,7 @@ const router = createRouter({
       name: "Contact",
       component: Contact,
     },
+
     {
       path: "/:pathMatch(.*)*",
       name: "PageNotFound",

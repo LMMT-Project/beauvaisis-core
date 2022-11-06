@@ -11,7 +11,6 @@ import DateTime from "../components/Article/DateTime.vue";
   <article>
     <div class="article-header-container">
       <div class="article-header-content">
-
         <div class="article-header-top">
           <div class="article-breadcrumb">
             <Breadcrumb path="Home/Articles/Cet Article" />

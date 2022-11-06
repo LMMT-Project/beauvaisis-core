@@ -7,10 +7,18 @@ import SectionTitle from "../Utils/SectionTitle.vue";
   <section class="quickaccess-container">
     <SectionTitle class="quickaccess-title">Accès Rapide</SectionTitle>
     <div class="quickaccess-buttons">
-      <QuickAccessButton> Text</QuickAccessButton>
-      <QuickAccessButton> Text</QuickAccessButton>
-      <QuickAccessButton> Text</QuickAccessButton>
-      <QuickAccessButton> Text</QuickAccessButton>
+      <QuickAccessButton href="/news/fonctionnement-agglo"
+        >Fonctionnement de l'agglo</QuickAccessButton
+      >
+      <QuickAccessButton href="/news/les-secteurs-cles"
+        >Les secteurs clés</QuickAccessButton
+      >
+      <QuickAccessButton href="/news/tourisme"
+        >Sites touristiques</QuickAccessButton
+      >
+      <QuickAccessButton href="/news/transports-urbains"
+        >Transports</QuickAccessButton
+      >
     </div>
   </section>
 </template>

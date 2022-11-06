@@ -1,16 +1,20 @@
 <script setup lang="ts">
 import IconMessage from "../icons/IconMessage.vue";
+
+defineProps<{
+  href: string;
+}>();
 </script>
 
 <template>
-  <div class="QA-button">
+  <a class="QA-button" :href="href">
     <IconMessage class="QA-icon" />
-    <a class="QA-arrow" href="#">
+    <div class="QA-arrow">
       <span class="QA-text">
         <slot />
       </span>
-    </a>
-  </div>
+    </div>
+  </a>
 </template>
 
 <style scoped>
@@ -26,6 +30,8 @@ import IconMessage from "../icons/IconMessage.vue";
 }
 
 .QA-button {
+  display: block;
+  cursor: pointer;
   position: relative;
   width: 244px;
   height: 196px;

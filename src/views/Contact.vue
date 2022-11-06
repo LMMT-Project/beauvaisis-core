@@ -6,52 +6,94 @@ import ContactSubmit from "../components/Contact/ContactSubmit.vue";
 </script>
 
 <template>
-  <div class="contact-header">
-    <SectionTitle>Contactez-nous</SectionTitle>
+  <div class="contact-page">
+    <div class="contactus-page">
+    <div class="contactus-header">
+      <SectionTitle>Contactez-nous</SectionTitle>
+    </div>
+    <div class="contactus-form">
+      <form action="">
+        <ContactInput
+            class="contactus-input"
+            inputid="contactus-nom"
+            name="nom"
+            label="Nom"
+            placeholder="Votre nom"
+        />
+        <ContactInput
+            class="contactus-input"
+            inputid="contactus-prenom"
+            name="prenom"
+            label="Prénom"
+            placeholder="Votre prénom"
+        />
+        <ContactInput
+            class="contactus-input"
+            inputid="contactus-email"
+            name="email"
+            label="Email"
+            placeholder="Votre email"
+            type="email"
+        />
+        <ContactTextArea
+            class="contactus-input"
+            inputid="contactus-message"
+            name="message"
+            label="Message"
+            placeholder="Votre message"
+        />
+        <ContactSubmit class="contactus-submit" value="Envoyer" />
+      </form>
+    </div>
   </div>
-  <div class="contact-form">
-    <form action="">
-      <ContactInput
-        class="contact-input"
-        inputid="contact-input-nom"
-        name="nom"
-        label="Nom"
-        placeholder="Votre nom"
-      />
-      <ContactInput
-        class="contact-input"
-        inputid="contact-input-prenom"
-        name="prenom"
-        label="Prénom"
-        placeholder="Votre prénom"
-      />
-      <ContactInput
-        class="contact-input"
-        inputid="contact-input-email"
-        name="email"
-        label="Email"
-        placeholder="Votre email"
-        type="email"
-      />
-      <ContactTextArea
-        class="contact-input"
-        inputid="contact-input-message"
-        name="message"
-        label="Message"
-        placeholder="Votre message"
-      />
-      <ContactSubmit class="contact-submit" value="Envoyer" />
-    </form>
+
+    <div class="contactinfo-page">
+      <div class="contactinfo-header">
+        <SectionTitle>Informations contact</SectionTitle>
+      </div>
+      <div class="contactinfo-body">
+        <div class="contact-info-body-item">
+          <p>Adresse</p>
+          <a href="http://maps.google.com/?q=48 rue Desgroux, Beauvais, France">48 rue Desgroux<br />Beauvais, France</a>
+        </div>
+        <div class="contact-info-body-item">
+          <p>Téléphone</p>
+          <a href="tel:0344156800">03 44 15 68 00</a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.contact-header {
+.contact-page {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.contactinfo-header,
+.contactus-header {
   margin-bottom: 40px;
 }
 
-.contact-form {
-  width: 60%;
+.contactinfo-body {
+  width: 40vw;
+  text-align: center;
+}
+
+.contact-info-body-item {
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.contact-info-body-item a {
+  color: var(--dark-blue);
+  text-decoration: none;
+}
+
+.contactus-form {
+  width: 40vw;
   margin: auto;
   background-color: var(--light-blue);
   padding: 40px;
@@ -59,8 +101,7 @@ import ContactSubmit from "../components/Contact/ContactSubmit.vue";
   color: var(--white);
 }
 
-.contact-input {
+.contactus-input {
   margin-bottom: 40px;
 }
-
 </style>
