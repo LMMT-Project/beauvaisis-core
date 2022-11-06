@@ -1,5 +1,11 @@
+<script setup lang="ts">
+  defineProps<{
+    href: string;
+  }>();
+</script>
+
 <template>
-  <a class="content" href="#"><slot class="icon"></slot></a>
+  <a class="content" :href="href"><slot class="icon"></slot></a>
 </template>
 
 <style scoped>

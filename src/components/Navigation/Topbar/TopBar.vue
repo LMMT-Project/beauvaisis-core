@@ -8,9 +8,9 @@ import TopBarIcon from "./TopBarIcon.vue";
 <template>
   <div class="top-bar">
     <div class="icons-container">
-      <TopBarIcon><IconMail class="icon"></IconMail></TopBarIcon>
-      <TopBarIcon><IconPhone class="icon"></IconPhone></TopBarIcon>
-      <TopBarIcon><IconFacebook class="icon"></IconFacebook></TopBarIcon>
+      <TopBarIcon href="/contact"><IconMail class="icon"></IconMail></TopBarIcon>
+      <TopBarIcon href="#"><IconPhone class="icon"></IconPhone></TopBarIcon>
+      <TopBarIcon href="#"><IconFacebook class="icon"></IconFacebook></TopBarIcon>
     </div>
   </div>
 </template>

@@ -35,8 +35,8 @@ const valueChanged = (value: boolean) => {
       <NavBarItem class="navbar-item" text="Text" href="#"></NavBarItem>
       <NavBarItem
         class="navbar-item"
-        text="Contact"
-        href="/contact"
+        text="Text"
+        href="#"
       ></NavBarItem>
     </div>
   </nav>
