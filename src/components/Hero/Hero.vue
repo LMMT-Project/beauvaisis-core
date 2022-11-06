@@ -23,7 +23,6 @@ import HeroSearchBar from "./Items/HeroSearchBar.vue";
   background-image: url("../../assets/images/HeroBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
-
   overflow: auto;
 }
 
