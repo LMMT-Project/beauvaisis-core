@@ -8,44 +8,44 @@ import ContactSubmit from "../components/Contact/ContactSubmit.vue";
 <template>
   <div class="contact-page">
     <div class="contactus-page">
-    <div class="contactus-header">
-      <SectionTitle>Contactez-nous</SectionTitle>
-    </div>
-    <div class="contactus-form">
-      <form action="">
-        <ContactInput
+      <div class="contactus-header">
+        <SectionTitle>Contactez-nous</SectionTitle>
+      </div>
+      <div class="contactus-form">
+        <form action="">
+          <ContactInput
             class="contactus-input"
             inputid="contactus-nom"
             name="nom"
             label="Nom"
             placeholder="Votre nom"
-        />
-        <ContactInput
+          />
+          <ContactInput
             class="contactus-input"
             inputid="contactus-prenom"
             name="prenom"
             label="Prénom"
             placeholder="Votre prénom"
-        />
-        <ContactInput
+          />
+          <ContactInput
             class="contactus-input"
             inputid="contactus-email"
             name="email"
             label="Email"
             placeholder="Votre email"
             type="email"
-        />
-        <ContactTextArea
+          />
+          <ContactTextArea
             class="contactus-input"
             inputid="contactus-message"
             name="message"
             label="Message"
             placeholder="Votre message"
-        />
-        <ContactSubmit class="contactus-submit" value="Envoyer" />
-      </form>
+          />
+          <ContactSubmit class="contactus-submit" value="Envoyer" />
+        </form>
+      </div>
     </div>
-  </div>
 
     <div class="contactinfo-page">
       <div class="contactinfo-header">
@@ -54,7 +54,9 @@ import ContactSubmit from "../components/Contact/ContactSubmit.vue";
       <div class="contactinfo-body">
         <div class="contact-info-body-item">
           <p>Adresse</p>
-          <a href="http://maps.google.com/?q=48 rue Desgroux, Beauvais, France">48 rue Desgroux<br />Beauvais, France</a>
+          <a href="http://maps.google.com/?q=48 rue Desgroux, Beauvais, France"
+            >48 rue Desgroux<br />Beauvais, France</a
+          >
         </div>
         <div class="contact-info-body-item">
           <p>Téléphone</p>
@@ -69,7 +71,7 @@ import ContactSubmit from "../components/Contact/ContactSubmit.vue";
 .contact-page {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin: 40px 0;
 }
 
 .contactinfo-header,
@@ -94,6 +96,10 @@ import ContactSubmit from "../components/Contact/ContactSubmit.vue";
 .contact-info-body-item a {
   color: var(--dark-blue);
   text-decoration: none;
+}
+
+.contact-info-body-item a:hover {
+  text-decoration: underline;
 }
 
 .contactus-form {

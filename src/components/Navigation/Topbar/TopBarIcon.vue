@@ -5,7 +5,11 @@ defineProps<{
 </script>
 
 <template>
-  <a class="content" :href="href"><slot class="icon"></slot></a>
+  <a class="content" :href="href">
+    <span class="icon">
+      <slot></slot>
+    </span>
+  </a>
 </template>
 
 <style scoped>
@@ -17,5 +21,12 @@ defineProps<{
   background-color: var(--light-blue);
   border-radius: 50%;
   margin-left: 22px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>

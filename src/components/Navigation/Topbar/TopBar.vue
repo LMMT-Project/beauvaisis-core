@@ -38,13 +38,6 @@ import TopBarIcon from "./TopBarIcon.vue";
   margin-right: 86px;
 }
 
-.icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 @media screen and (max-width: 520px) {
   .top-bar {
     justify-content: center;
