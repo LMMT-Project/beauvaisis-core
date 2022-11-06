@@ -96,10 +96,12 @@ import DateTime from "../components/Article/DateTime.vue";
 }
 
 .article-header-top {
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
+  height: 40px;
 }
-
+/*SALUT GERANDE DINDE*/ /* tg */
 .article-header-bot {
   height: 80%;
   display: flex;
@@ -128,10 +130,6 @@ import DateTime from "../components/Article/DateTime.vue";
 
 .article-body p {
   margin-bottom: 50px;
-  width: 80%;
-}
-.article-body p:nth-child(even) {
- text-align: right;
-  margin-left: auto;
+  text-align: justify;
 }
 </style>

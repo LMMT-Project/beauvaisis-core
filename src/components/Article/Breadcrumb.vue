@@ -9,36 +9,56 @@ defineProps<{
 
 <template>
   <div class="breadcrumb">
-    <ul>
-      <li v-for="item in path.split('/')" :key="item">
+    <div class="breadcrumb-content">
+      <span v-for="item in path.split('/')" :key="item">
         <a href="#">{{ item }}</a>
-      </li>
-    </ul>
+      </span>
+    </div>
   </div>
 </template>
 
 <style scoped>
-ul {
-  display: flex;
-  padding-inline-start: 0;
-  width: max-content;
+
+.breadcrumb {
+  position: relative;
+  height: 100%;
   background-color: var(--light-blue);
-  border-radius: 0 0 20px 0;
-  padding: 20px 40px 20px 20px;
+  border-radius: 0 20px 20px 0;
 }
-li {
+
+.breadcrumb-content {
+  display: flex;
+  height: 100%;
+  padding-inline-start: 0;
+}
+
+span {
   color: var(--white);
   list-style-type: none;
+  margin: auto;
 }
-li::after {
+
+span:first-child {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+span:last-child {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+span::after {
   color: var(--white);
   content: ">";
   margin: 0 20px;
 }
-li:last-child::after {
+
+span:last-child::after {
   content: "";
   display: none;
 }
+
 a {
   color: var(--white);
   text-decoration: none;

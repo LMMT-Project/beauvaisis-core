@@ -8,24 +8,30 @@ defineProps<{
 
 <template>
   <div class="datetime">
-    <div class="icon-datetime">
-      <IconDateTime />
-    </div>
+    <IconDateTime class="icon-datetime" />
     <p>{{ date }}</p>
   </div>
 </template>
 
 <style scoped>
 .datetime {
+  position: relative;
   display: flex;
-  justify-content: flex-start;
-  line-height: 24px;
+  gap: 10px;
   background-color: var(--light-blue);
-  border-radius: 0 0 0 20px;
-  padding: 10px 10px 10px 20px;
+  border-radius: 20px 0 0 20px;
+  height: 100%;
 }
 
+.icon-datetime {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+
 .datetime p {
-  margin-left: 10px;
+  margin: auto 5px auto 40px;
 }
 </style>
