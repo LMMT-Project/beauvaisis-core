@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import HeroWave from "../components/Hero/HeroWaves.vue"
 import ArticleTitle from "../components/Article/Title.vue";
 import Tag from "../components/Article/Tag.vue";
 import Breadcrumb from "../components/Article/Breadcrumb.vue";
 import ShortDescription from "../components/Article/ShortDescription.vue";
 import DateTime from "../components/Article/DateTime.vue";
+import Hero from "@/components/Hero/Hero.vue";
 </script>
 
 <template>
@@ -23,9 +25,12 @@ import DateTime from "../components/Article/DateTime.vue";
         <div class="article-description">
           <ShortDescription class="article-description">
             This is a short description of this article. It can have multiple lines
+            Adipisci decore deseruisse viverra mollis accumsan.
+            Non vituperatoribus suscipit natum pulvinar maiorum scelerisque referrentur.
           </ShortDescription>
         </div>
       </div>
+      <HeroWave />
     </div>
 
 
@@ -72,7 +77,7 @@ article {
 .article-header-content {
   position: relative;
   z-index: 20;
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;

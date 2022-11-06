@@ -10,10 +10,7 @@ import HeroWaves     from "@/components/Hero/HeroWaves.vue";
         <h1>Communauté d'agglomération du Beauvaisis</h1>
       </div>
       <HeroSearchBar />
-
     </div>
-
-
     <HeroWaves />
   </section>
 
