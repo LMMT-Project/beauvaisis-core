@@ -77,8 +77,12 @@ import ContactSubmit from "../components/Contact/ContactSubmit.vue";
   margin-bottom: 40px;
 }
 
+.contactinfo-page {
+  align-self: center;
+}
+
 .contactinfo-body {
-  width: 40vw;
+  width: 20vw;
   text-align: center;
 }
 
@@ -93,7 +97,7 @@ import ContactSubmit from "../components/Contact/ContactSubmit.vue";
 }
 
 .contactus-form {
-  width: 40vw;
+  width: 60vw;
   margin: auto;
   background-color: var(--light-blue);
   padding: 40px;
