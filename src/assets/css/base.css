@@ -1,0 +1,21 @@
+:root {
+    /* ===== COLORS ===== */
+    --dark-blue: #18314f;
+    --light-blue: #8bbeb2;
+    --white: #fbfbff;
+    --active: #C8F24F;
+
+    /* ===== GLOBAL VARS ===== */
+    --topBar-height: 64px;
+    --navBar-height: 96px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, serif;
+    background-color: var(--white);
+}

@@ -1,0 +1,11 @@
+#IDE Folders
+.idea
+.vscode
+
+#Protected Files
+.env
+
+#Node Modules xD
+node_modules
+package-lock.json
+
