@@ -4,18 +4,16 @@ import ArticleTitle from "../components/Article/Title.vue";
 import Tag          from "../components/Article/Tag.vue";
 import Breadcrumb   from "../components/Article/Breadcrumb.vue";
 import DateTime     from "../components/Article/DateTime.vue";
-import { ref, type Ref }      from "vue";
+import { ref, type Ref, reactive }      from "vue";
 
-let title = ref(""),
+const title = ref(""),
     slug = ref(""),
     content = ref(""),
-    tags: Ref<string[]> = ref([]);
+    date = ref(""),
+    pathv = ref(""),
+    tags: string[] = reactive([]);
 
 slug.value =  location.href.split("/")[location.href.split("/").length - 1];
-
-let pathv = `Home/${tags.value[0]}/${title.value}`
-
-console.log(slug);
 
 
 fetch(`http://127.0.0.1:3333/news/${slug.value}`)
@@ -25,10 +23,27 @@ fetch(`http://127.0.0.1:3333/news/${slug.value}`)
     slug.value = res.slug;
     content.value = res.content;
 
+    const fullDate = res.date.split('T').join('|').split('.')[0];
+
+    const datePart = fullDate.split('|')[0].split('-').reverse().join('-');
+    const time = fullDate.split('|')[1].split(':');
+    time.length = 2;
+    
+
+    date.value = `${datePart} - ${time.join(':')}`
+
     for(const tag of res.tags) {
-      tags.value = [...tags.value, tag.name];
+      tags.push(tag.name);
+      console.log(tags)
     }
+
+    pathv.value = `Home/${tags[0] === undefined ? "" : tags[0] + "/"}${title.value}`
+
   });
+
+
+  
+
 
 </script>
 
@@ -41,7 +56,7 @@ fetch(`http://127.0.0.1:3333/news/${slug.value}`)
             <Breadcrumb :path="pathv" />
           </div>
           <div class="article-datetime">
-            <DateTime date="01/01/2001 00:01" />
+            <DateTime :date="date" />
           </div>
         </div>
 
@@ -59,7 +74,8 @@ fetch(`http://127.0.0.1:3333/news/${slug.value}`)
       <HeroWave />
     </div>
 
-    <div class="article-body" v-html="content">
+    <div class="article-body">
+      <span v-html="content"> </span> 
     </div>
   </article>
 </template>
@@ -126,7 +142,7 @@ fetch(`http://127.0.0.1:3333/news/${slug.value}`)
   font-size: 24px;
 }
 
-.article-body p {
+.article-body ::v-deep p {
   margin-bottom: 50px;
   text-align: justify;
 }

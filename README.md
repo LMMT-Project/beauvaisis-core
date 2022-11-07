@@ -1,46 +1,24 @@
 # beauvaisis-core
 
-This template should help get you started developing with Vue 3 in Vite.
+Ce site est une reproduction a but éducative du site officiel de l'agglomération de Beauvaisis, trouvable sur le lien internet : http://www.beauvaisis.fr/
 
-## Recommended IDE Setup
+Il a été reproduit pour une SAé, par des étudiant de l'IUT de Paris Rives de Seine (En informatique).
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Type Support for `.vue` Imports in TS
+### Lancement du projet 
+Pour lancer le projet vous devez avoir Node et effectuer ces commandes.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+1. Installer les dépendances
+`npm install`
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+2. Lancer le projet en mode développeur
+`npm run dev`
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+3. Aller sur le site, hébergé en local
+`http://localhost:5173`
 
-## Customize configuration
+### Information complémentaires
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Le site a comme dépendance le backend de ce projet, disponible dans la même organisation GITHUB.
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+La page `ACTUALITÉ` a volontairement pas de page, pour accéder à la page 404.

@@ -1,8 +1,8 @@
 <template>
   <div class="pagenotfound-container">
-    <h1>Error 404</h1>
-    <h1>Page not found</h1>
-    <a href="/">Return to website</a>
+    <h1>Erreur 404</h1>
+    <h1>Page inexistante</h1>
+    <a href="/">Retourner en lieu sûr</a>
   </div>
 </template>
 
